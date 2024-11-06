@@ -1,0 +1,43 @@
+{
+  "name": "contact-enrichment",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.11",
+    "@langchain/core": "^0.3.17",
+    "@langchain/openai": "^0.3.11",
+    "@neondatabase/serverless": "^0.10.2",
+    "@radix-ui/react-select": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "csvtojson": "^2.0.10",
+    "inngest": "^3.25.0",
+    "lucide-react": "^0.454.0",
+    "next": "15.0.2",
+    "openai": "^4.71.0",
+    "openapi-fetch": "^0.13.0",
+    "react": "19.0.0-rc-02c0e824-20241028",
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "swr": "^2.2.5",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5"
+  }
+}
