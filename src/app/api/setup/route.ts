@@ -4,6 +4,9 @@ import { neon } from "@neondatabase/serverless";
 import { neonApiClient, getTenantConnectionString } from "@/lib/neon-tenant";
 import { setupTenantSchema } from "@/lib/neon-tenant/setup";
 
+const NUMBER_OF_WORKSPACES = 2;
+
+// The workspaces <> neon project relationship is stored in the global database's `workspaces` table
 async function seed() {
   async function createProject() {
     const { data } = await neonApiClient.POST("/projects", {
@@ -14,7 +17,7 @@ async function seed() {
     return data?.project.id;
   }
 
-  const tenantPromises = [1, 2].map(async () => {
+  const tenantPromises = [...Array(NUMBER_OF_WORKSPACES)].map(async () => {
     const projectId = await createProject();
     const uri = await getTenantConnectionString(projectId!);
     const tenantClient = neon(uri!);
@@ -33,6 +36,7 @@ async function seed() {
   }
 }
 
+// This endpoint is used to setup the database and the workspaces
 export async function GET() {
   await seed();
   return NextResponse.json({ message: "done" });

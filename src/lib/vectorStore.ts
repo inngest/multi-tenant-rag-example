@@ -8,6 +8,7 @@ const embeddings = new OpenAIEmbeddings({
   model: "text-embedding-3-small",
 });
 
+// Each workspace has its own vector store
 export default async function loadVectorStore(workspaceId: string) {
   const connectionString = await getTenantConnectionString(workspaceId);
 

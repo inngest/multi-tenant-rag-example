@@ -9,7 +9,7 @@ export const neonApiClient = createClient<paths>({
     Authorization: `Bearer ${process.env.NEON_API_KEY}`,
   },
 });
-
+// Each workspace has its own database, and this function returns the connection string for a given workspace
 export async function getTenantConnectionString(workspaceId: string) {
   const sql = neon(process.env.POSTGRES_URL as string);
 
