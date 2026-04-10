@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@langchain/community": "^0.3.11",
-    "@langchain/core": "^0.3.17",
-    "@langchain/openai": "^0.3.11",
+    "@langchain/community": "^1.1.27",
+    "@langchain/core": "^1.1.39",
+    "@langchain/openai": "^1.4.4",
     "@neondatabase/serverless": "^0.10.2",
     "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
